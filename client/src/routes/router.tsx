@@ -1,10 +1,17 @@
 import { createBrowserRouter } from "react-router";
-import App from "../App";
+import Whiteboard from "../components/Whiteboard";
+import RootLayout from "../layouts/RootLayout";
 
 const router = createBrowserRouter([
     {
         path: "/",
-        Component: App,
+        Component: RootLayout,
+        children: [
+            {
+                path:"board",
+                Component: Whiteboard
+            }
+        ]
     }
 ]);
 
